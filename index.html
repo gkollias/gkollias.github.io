@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Kollias | Senior Full Stack Software Engineer</title>
+    <style>
+        /* Import retro computer fonts */
+        @import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --primary-color: #00aa00;
+            --secondary-color: #333;
+            --bg-color: #f5f5f5;
+            --terminal-bg: #111;
+            --terminal-green: #00ff00;
+            --terminal-text: #cccccc;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Space Mono', monospace;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: var(--bg-color);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-top: 30px;
+        }
+        
+        .terminal-bar {
+            background: #cccccc;
+            height: 25px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        
+        .terminal-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .terminal-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .red {
+            background-color: #ff5f56;
+        }
+        
+        .yellow {
+            background-color: #ffbd2e;
+        }
+        
+        .green {
+            background-color: #27c93f;
+        }
+        
+        .name-title {
+            font-family: 'VT323', monospace;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .profession {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .intro-terminal {
+            background-color: var(--terminal-bg);
+            color: var(--terminal-green);
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            font-family: 'VT323', monospace;
+            font-size: 1.2rem;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .intro-terminal p {
+            margin-bottom: 10px;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: var(--terminal-green);
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 49% {
+                opacity: 1;
+            }
+            50%, 100% {
+                opacity: 0;
+            }
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            font-family: 'VT323', monospace;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+        
+        .content-block {
+            margin-bottom: 30px;
+        }
+        
+        .content-block h3 {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .date-location {
+            font-family: 'VT323', monospace;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .description {
+            font-size: 0.9rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background-color: var(--terminal-bg);
+            color: var(--terminal-green);
+            font-family: 'VT323', monospace;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .icon {
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dotted var(--secondary-color);
+            font-size: 0.8rem;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .name-title {
+                font-size: 2.5rem;
+            }
+            
+            .intro-terminal {
+                font-size: 1rem;
+                padding: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="terminal-bar">
+            <div class="terminal-buttons">
+                <div class="terminal-circle red"></div>
+                <div class="terminal-circle yellow"></div>
+                <div class="terminal-circle green"></div>
+            </div>
+        </div>
+        <h1 class="name-title">GEORGE KOLLIAS</h1>
+        <p class="profession">SENIOR FULL STACK SOFTWARE ENGINEER</p>
+        <div class="intro-terminal">
+            <p>> Hello, world!</p>
+            <p>> I'm a Full Stack Engineer specializing in fintech solutions.</p>
+            <p>> Expert in React, JavaScript, Java, and distributed systems<span class="cursor"></span></p>
+        </div>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>
+                Senior Full Stack Software Engineer with over 10 years of experience developing scalable web applications and enterprise solutions. Strong expertise in payment systems, financial technologies, and distributed architectures. Proven track record of leading complex technical projects and mentoring engineering teams.
+            </p>
+        </section>
+        
+        <section id="experience">
+            <h2>WORK EXPERIENCE</h2>
+            
+            <div class="content-block">
+                <h3>FULL STACK SOFTWARE ENGINEER / SENIOR FULL STACK SOFTWARE ENGINEER</h3>
+                <p class="date-location">BOOKING.COM | MAY 2019 - PRESENT</p>
+                <div class="description">
+                    <ul>
+                        <li>Designed and developed solutions for Fintech Business Unit for both Partner and Guest side</li>
+                        <li>Implemented SCA functionality on payments for Post Booking Payments (React JS, JavaScript, Perl, MySQL, Git)</li>
+                        <li>Implemented functionality and monitoring tools for paying out Booking Partners in several payout methods (VueJS, JavaScript, Perl, Java, MySQL, Hadoop, Git)</li>
+                        <li>Implemented Damage Policy Payout Automation for different payout methods</li>
+                        <li>Led the MFE (Micro FrontEnd) migration of payouts page for BT (Bank Transfer) partners</li>
+                        <li>Mentored Junior and Core engineers by accelerating their onboarding, conducting workshops, and leading hackathons</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>SOFTWARE ENGINEER</h3>
+                <p class="date-location">OTE | JANUARY 2016 - MAY 2019</p>
+                <div class="description">
+                    <p><strong>Corporate Portfolio:</strong></p>
+                    <ul>
+                        <li>Implemented an app to hold OTE Projects with Project Management and Financial Information capabilities to centralize Project Management in the company (ASP.NET MVC, C#, SQL Server, JavaScript)</li>
+                    </ul>
+                    <p><strong>Workflows:</strong></p>
+                    <ul>
+                        <li>Implemented 7 workflows used by the whole Company with over 5000 requests (ASP.NET MVC, C#, SharePoint 2010/2013, SQL Server, JavaScript)</li>
+                    </ul>
+                    <p><strong>RPA:</strong></p>
+                    <ul>
+                        <li>Delivered 11 RPA Processes to production by contributing to the team as a Project Manager, Designer, or Programmer. Built and monitored the Company's Bot Workforce (Blue Prism, Softomotive)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>SOFTWARE ENGINEER</h3>
+                <p class="date-location">VCI | JANUARY 2014 - DECEMBER 2015</p>
+                <div class="description">
+                    <ul>
+                        <li>Implemented Workflows, SharePoint Solutions for OTE Employees internal use (ASP.NET MVC, C#, SharePoint 2010/2013, SQL Server, JavaScript)</li>
+                        <li>Worked as an external associate at OTE (Business Automation Section)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>SOFTWARE ENGINEER</h3>
+                <p class="date-location">PEC ENTERPRISES | JULY 2013 - DECEMBER 2013</p>
+                <div class="description">
+                    <ul>
+                        <li>Implemented and designed parts of the Front End and the Back End of a Fleet Management System (ASP.NET, MVVM, C#, SilverLight, SQL Server)</li>
+                        <li>Responsible for UX Design</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="content-block">
+                <h3>PROGRAMMER / SENIOR PROGRAMMER</h3>
+                <p class="date-location">ACCENTURE | SEPTEMBER 2010 - JUNE 2013</p>
+                <div class="description">
+                    <p><strong>Commercial Bank Project (September 2010 - December 2012):</strong></p>
+                    <ul>
+                        <li>Implemented services, batches, and Desktop Applications to support Banking Operations (C, COBOL, SQL)</li>
+                        <li>Participated in the Project Lifecycle from User Requirements to Design, Implementation, and Testing</li>
+                    </ul>
+                    <p><strong>OTE WFM Project (January 2013 - June 2013):</strong></p>
+                    <ul>
+                        <li>Implemented mostly stored procedures to generate daily reports for a WorkForce Management Platform (used by over 2000 technicians to record their daily work) (SQL Server)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>EDUCATION</h2>
+            
+            <div class="content-block">
+                <h3>BSc IN COMPUTER SCIENCE</h3>
+                <p class="date-location">UNIVERSITY OF CRETE | FALL 2002 - FALL 2008</p>
+                <div class="description">
+                    <p>GPA: 7.03/10. Coursework included Artificial Intelligence, Operating Systems, Algorithms & Complexity, Compilers & Programming Languages, Game Design, Game Programming, and Databases.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>SKILLS</h2>
+            
+            <div class="skills-container">
+                <span class="skill-tag">React JS</span>
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Perl</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </section>
+        
+        <section id="additional">
+            <h2>ADDITIONAL EXPERIENCE</h2>
+            
+            <div class="content-block">
+                <h3>INSTRUCTOR</h3>
+                <p class="date-location">2010 - 2011</p>
+                <div class="description">
+                    <p>Taught Computer Science courses to High School Students as a part-time job.</p>
+                </div>
+            </div>
+        </section>
+            <h2>INTERESTS</h2>
+            <p>CrossFit, Running, Cycling, Swimming, Reading</p>
+        </section>
+        
+        <section id="contact">
+            <h2>CONTACT</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <span>gkollias13@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📱</span>
+                    <span>(0031) 619606910</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🏠</span>
+                    <span>Amsterdam, Netherlands</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">🔗</span>
+                    <a href="https://www.linkedin.com/in/kolliasgeorge/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 GEORGE KOLLIAS | Last updated: April 2025</p>
+    </footer>
+</body>
+</html>
